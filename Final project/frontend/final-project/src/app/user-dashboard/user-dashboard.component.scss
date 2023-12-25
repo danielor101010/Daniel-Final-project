@@ -1,0 +1,100 @@
+.wrapper {
+  display: flex;
+  background-color: rgba(244, 245, 245, 0.863); 
+}
+.header {
+  display: flex;
+  height: 60px;
+  background-color: rgb(236, 236, 236);
+  margin-bottom: 7px;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 0 20px; 
+  box-shadow: 3px -4px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.first-section-items {
+  display: flex;
+  width: 100%;
+  justify-content: center; 
+
+}
+
+.right-box {
+  background-color: rgb(236, 236, 236);
+  margin: auto;
+  height: 90vh;
+  width: 100%;
+  padding: 20px;
+  border-radius: 58% 27% 0% 75% / 42% 17% 10% 38% ;
+  transition: border-radius 0.5s ease-in-out;
+  box-shadow: -20px 18px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.right-box:hover{
+  border-radius: 32% 43% 23% 45% / 42% 20% 49% 32%;
+
+}
+.left-box {
+  background-color: rgb(236, 236, 236);
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 60% 40% 55% 45% / 36% 78% 22% 64%;
+  box-shadow: -9px -2px 20px rgba(0, 0, 0, 0.3);
+  transition:  border-radius 0.5s ease-in-out;
+}
+.left-box:hover{
+  border-radius: 32% 43% 23% 45% / 42% 20% 49% 32%;
+}
+
+.left-box-content {
+  height: 300px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.join-button,
+.login-button {
+  padding: 10px 20px;
+  font-size: 25px;
+  margin: 3px 7px;
+  background-color: #a6a59b; 
+  color: #fff; 
+  border: none;
+  border-radius: 60% 40% 55% 45% / 36% 78% 22% 64% ;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.toggle-button{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid transparent; 
+  transition: border-bottom 0.5s ease-in-out;
+  
+}
+.toggle-button:hover{
+  border-bottom: 1px solid rgb(116, 112, 112);
+}
+.logout-btn{
+  transition: color 0.5s ease-in-out;
+}
+.logout-btn:hover{
+color: red;
+}
+

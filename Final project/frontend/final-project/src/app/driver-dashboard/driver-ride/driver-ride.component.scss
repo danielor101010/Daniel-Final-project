@@ -1,0 +1,67 @@
+
+.ride-box {
+  width: 350px;
+  max-width: 400px;
+  display: flex;
+  text-align: left;
+  justify-content: space-between; 
+  background-color: rgba(236, 239, 243, 0.76);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  padding: 10px 5;
+}
+
+.ride-box:hover {
+  box-shadow: -20px 18px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ride-details {
+  padding: 15px;
+}
+
+  
+  .departure,
+  .destination,
+  .time {
+    margin: 0;
+  }
+  
+  
+  .delete-btn {
+    color: #d32323;
+    border: none;
+    padding: 5px 6px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 54% 46% 41% 59% / 37% 42% 58% 63% ;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .delete-btn:hover {
+    background-color: #efeee97a;
+    border-radius: 54% 46% 41% 59% / 37% 42% 58% 63%;
+  }
+
+  
+  .no-rides {
+    margin-top: 20px;
+  }
+  
+h2 {
+  color: #333;
+}
+
+h3, h4 {
+  margin: 0;
+  color: #555;
+  font-size: 20px;
+  font-family: serif;
+}
+
+p {
+  color: #777;
+}

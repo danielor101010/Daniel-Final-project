@@ -1,0 +1,41 @@
+<body class="wrapper">
+  <form class="form-signin" [formGroup]="form" (ngSubmit)="submit()">
+    <h1 class="">Driver Registration</h1>
+    
+    <span class="red-note" *ngIf="!form.controls['first_name'].valid && form.controls['first_name']?.touched">*</span>
+    <label for="inputFirstName" class="">First Name</label>
+    <input formControlName="first_name" id="inputFirstName" class="" placeholder="First Name" required>
+
+    <span class="red-note" *ngIf="!form.controls['last_name'].valid && form.controls['last_name']?.touched">*</span>
+    <label for="inputLastName" class="">Last Name</label>
+    <input formControlName="last_name" id="inputLastName" class="" placeholder="Last Name" required>
+    
+    <span class="red-note" *ngIf="!form.controls['username'].valid && form.controls['username']?.touched">*</span>
+    <label for="inputUsername" class="">Username</label>
+    <input formControlName="username" id="inputUsername" class="" placeholder="Username" required>
+
+    <span class="red-note" *ngIf="!form.controls['email'].valid && form.controls['email']?.touched">*</span>
+    <label for="inputEmail" class="">Email address</label>
+    <input formControlName="email" id="inputEmail" type="email" class="" placeholder="Email address" required>
+
+    <span class="red-note" *ngIf="!form.controls['password'].valid && form.controls['password']?.touched">*</span>
+    <label for="inputPassword" class="">Password</label>
+    <input formControlName="password" id="inputPassword" type="password" class="" placeholder="Password" required>
+
+
+    <span class="red-note" *ngIf="!form.controls['phone'].valid && form.controls['phone']?.touched">*</span>
+    <label for="inputPhone" class="">Phone</label>
+    <input formControlName="phone" id="inputPhone" class="" placeholder="Phone" required>
+    
+    <label for="inputCarType" class="">Car Type</label>
+    <input formControlName="carType" id="inputCarType" class="" placeholder="Car Type(Leave empty fo IDF type)" >
+    
+    <span class="red-note" *ngIf="!form.controls['seats'].valid && form.controls['seats']?.touched">*</span>
+    <label for="inputSeats" class="">Number of Seats</label>
+    
+    <input formControlName="seats" id="inputSeats" class="" placeholder="Number of Seats (5 by default)">
+    <p *ngIf="userAlreadyExist">It seems like you already have an account</p>
+
+    <button class="driver-reg-btn" type="submit" [disabled]="form.invalid">Sign up</button>
+  </form>
+</body>

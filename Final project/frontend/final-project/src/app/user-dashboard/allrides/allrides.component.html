@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="ride-container">
+    <h2 class="available-title">Available Rides</h2>
+    <app-search-bar [objects]="rides" (filteredObjects)="filter($event)"></app-search-bar>
+      <div *ngFor="let ride of filteredRides" class="ride-box" (click)="toggleDetails(ride)">
+        <div class="ride-details">
+          <h3><em> Departure:</em> {{ ride.departure }}</h3>
+          <h4><em>Destination: </em>{{ ride.destination }}</h4>
+          <p *ngIf="ride.showDetails" class="ride-details"><em>On: {{ ride.time }}</em></p>
+        </div>
+
+        <button class="join-btn" (click)="joinRide(ride.id)">Join ride</button>
+      </div>
+      <p *ngIf="rideIsFull">Sorry this ride is full</p>
+    </div>
+</div>

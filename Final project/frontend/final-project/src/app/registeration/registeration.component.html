@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="wrapper">
+ 
+<div class="left-div" *ngIf="isDriverForm">
+  <h1>Join us</h1>
+  <p>Join our community and travel around the Basis</p>
+  <button  class="passenger-reg-btn" (click)="showPassengerForm()">Passenger Registration</button>
+</div>
+<div class="left-div" *ngIf="!isDriverForm" >
+  <h1>Share your drive</h1>
+  <p>Share you drive with other soldiers</p>
+  <button class="driver-reg-btn" (click)="showDriverForm()">Driver Registration</button>
+</div>
+<div class="right-div">
+  <div class="registration-form" *ngIf="!isDriverForm">
+    <app-passenger-reg></app-passenger-reg>
+  </div>
+
+  <div class="registration-form" *ngIf="isDriverForm">
+    <app-driver-reg></app-driver-reg>
+  </div>
+</div>
+</div>

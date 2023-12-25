@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <div class="ride-container">
+    <h2>Your Rides as a Driver</h2>
+    <div *ngIf="driverRides.length > 0">
+      <div *ngFor="let ride of driverRides" class="ride-box" (click)="toggleDetails(ride)">
+        <div class="ride-details">
+          <h3>Departure: <em>{{ ride.departure }}</em></h3>
+          <h4>Destination: <em>{{ ride.destination }}</em></h4>
+          <div *ngIf="ride.showDetails" class="ride-details">
+            <h4>Time: <em>{{ ride.time }}</em></h4>
+            <h4>Passengers:</h4>
+            <div *ngIf="ride.passengers.length > 0" class="passenger-list">
+              <ul>
+                <li *ngFor="let passenger of ride.passengers">
+                  <em>{{ passenger.username }}</em> (Phone: <em><a href="tel:{{ride.driver.phone}}">{{ passenger.phone }}</a></em>),
+                </li>
+              </ul>
+            </div>
+            <div *ngIf="!(ride.passengers && ride.passengers.length > 0)">
+              No passenger has joined yet.
+            </div>
+          </div>
+        </div>
+        <button class="delete-btn" (click)="deleteRide(ride.id)">Delete</button>
+      </div>
+    </div>
+    <div *ngIf="driverRides.length === 0" class="no-rides">
+      <p>No rides found for this driver.</p>
+    </div>
+  </div>
+</div>

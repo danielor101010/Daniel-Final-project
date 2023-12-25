@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="ride-container">
+    <div class="right-box">
+      <h2 class="available-title">Available Rides</h2>
+      <div *ngFor="let ride of myRides" class="ride-box" (click)="toggleDetails(ride)">
+        <div class="ride-details">
+          <h3> Departure: <em>{{ ride.departure }}</em> </h3>
+          <h4>Destination: <em>{{ ride.destination }}</em></h4>
+          <h4>Time: <em>{{ ride.time }}</em></h4>
+          <div *ngIf="ride.showDetails" class="ride-details">
+            <h4>Driver: <em>{{ ride.driver.username }}</em></h4>
+            <h4>Contact: <em><a href="tel:{{ride.driver.phone}}">{{ride.driver.phone}}</a></em></h4>
+            <h4>Car type: <em>{{ride.driver.carType}}</em></h4>
+            <hr>
+            <button  class="leave-btn" (click)="leaveRide(ride.id)">Leave Ride</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

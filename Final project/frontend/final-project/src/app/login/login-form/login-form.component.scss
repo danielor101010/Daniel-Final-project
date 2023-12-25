@@ -1,0 +1,71 @@
+/* styles.scss or your component's style file */
+
+body {
+    background-color: transparent;
+  }
+  
+  .wrapper{
+    width: fit-content;
+  }
+  .form-signin {
+    max-width: 400px;
+    padding: 15px;
+    margin-top: 5%;
+  }
+  
+  .form-signin h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #04080c;
+  }
+  
+  .form-signin label {
+    display: none;
+  }
+  
+  .form-signin input {
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  
+  .mt-5 {
+    margin-top: 20px;
+  }
+  
+  .mb-3 {
+    margin-bottom: 15px;
+  }
+  
+  .text-muted {
+    color: #6c757d;
+  }
+  .passenger-reg-btn{
+      padding: 10px 20px;
+      font-size: 20px;
+      margin: 3px 7px;
+      background-color: #a6a59b; 
+      color: #fff; 
+      border: none;
+      border-radius: 60% 40% 55% 45% / 36% 78% 22% 64% ;
+      cursor: pointer;
+      transition: background-color 0.5s ease-in-out;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  
+    }
+    .passenger-reg-btn:hover{
+      background-color: white;
+      color: #a6a59b;
+  
+    }
+    .red-note{
+      font-size: 12px;
+      color: rgb(139, 24, 24);
+      float: left;
+    }

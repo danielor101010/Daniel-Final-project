@@ -1,0 +1,77 @@
+.wrapper {
+    display: flex;
+    background-color: rgba(244, 245, 245, 0.863); 
+  }
+  
+  .first-section-items {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  .right-box {
+    margin: auto;
+    margin-right: 8px;
+    background-color: rgb(236, 236, 236);
+    height: 85vh;
+    width: 60%;
+    padding: 20px;
+    border-radius:60% 40% 55% 45% / 36% 30% 22% 64%;
+    transition: border-radius 0.5s ease-in-out;
+    box-shadow: -9px -2px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  .right-box:hover{
+    border-radius:46% 33% 39% 51% / 37% 33% 35% 29% ;
+
+  }
+  .left-box {
+    margin: auto;
+    text-align: center;
+  }
+  
+  .join-button,
+  .login-button {
+    padding: 10px 20px;
+    font-size: 25px;
+    margin: 3px 7px;
+    background-color: #a6a59b; 
+    color: #fff; 
+    border: none;
+    border-radius: 60% 40% 55% 45% / 36% 78% 22% 64% ;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+  }
+  .login-button{
+    background-color: transparent;
+    color: #a6a59b;
+  }
+  
+  .login-button:hover {
+    background-color: #a6a59b;
+    color: white;
+  }
+  .join-button:hover{
+    background-color: white;
+    color: #a6a59b;
+
+  }
+  
+
+  
+  .car-img{
+    margin-top: 5%;
+  }
+
+
+  
+h1 {
+  color: #333; 
+}
+
+p {
+  color: #555; 
+}

@@ -1,0 +1,32 @@
+<div class="header">
+  <div></div>
+  <div class="logo">
+    <h1>Logo</h1>
+  </div>
+  <div class="header-btns">
+    <button class="toggle-button" (click)="toggleMyRides()">
+      {{ showMyRides ? ' All Rides' : ' MyRides' }}
+    </button>
+    <button class="toggle-button logout-btn" (click)="logOut()"><i class="fas fa-sign-out-alt"></i></button>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="first-section-items">
+    <div class="left-box">
+        <div class="left-box-content">
+          <h2 *ngFor="let field of userDetails">Welcome {{ field.first_name }}</h2>
+        <h2>So, Where are we going today</h2>
+      </div>
+    </div>
+  </div>
+
+    <div class="right-box">
+      <div class="dashboard-container">
+        <div class="rides-section">
+          <app-allrides *ngIf="!showMyRides"></app-allrides>
+          <app-myrides *ngIf="showMyRides"></app-myrides>
+        </div>
+      </div>
+  </div>
+</div>

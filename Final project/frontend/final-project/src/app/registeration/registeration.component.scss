@@ -1,0 +1,72 @@
+
+.wrapper {
+  display: flex;
+  background-color: rgba(244, 245, 245, 0.863); 
+}
+.right-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+  margin-right: 0;
+  background-color: rgb(236, 236, 236);
+  height: 85vh;
+  width: 60%;
+  padding: 20px;
+  border-radius: 58% 27% 0% 75% / 42% 17% 10% 38% ;
+  transition: border-radius 0.5s ease-in-out;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.right-div:hover{
+  border-radius: 32% 43% 23% 45% / 42% 20% 49% 32%;
+
+}
+
+.registration-form {
+  width: 400px;
+  margin: 0;
+}
+
+.left-div {
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  color: #333; 
+}
+
+p {
+  color: #555; 
+}
+
+.passenger-reg-btn,
+  .driver-reg-btn {
+    padding: 10px 20px;
+    font-size: 25px;
+    margin: 3px 7px;
+    background-color: #a6a59b; 
+    color: #fff; 
+    border: none;
+    border-radius: 60% 40% 55% 45% / 36% 78% 22% 64% ;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    
+  }
+  .driver-reg-btn{
+    background-color: transparent;
+    color: #a6a59b;
+  }
+  
+  .driver-reg-btn:hover {
+    background-color: #a6a59b;
+    color: white;
+  }
+  .passenger-reg-btn:hover{
+    background-color: white;
+    color: #a6a59b;
+
+  }

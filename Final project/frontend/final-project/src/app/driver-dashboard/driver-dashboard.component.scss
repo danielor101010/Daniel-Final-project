@@ -1,0 +1,117 @@
+.header {
+  display: flex;
+  height: 60px;
+  color: black;
+  background-color: rgb(236, 236, 236);
+  justify-content: space-between;
+  align-items: center; 
+  padding: 0 20px; 
+  margin-bottom: 10px;
+  box-shadow: 2px -5px 20px rgba(0, 0, 0, 0.2);
+
+}
+.first-section-items {
+  display: flex;
+  width: 100%;
+  justify-content: center;   
+  background-color: rgba(244, 245, 245, 0.863); 
+}
+.wrapper {
+  display: flex;
+}
+
+.right-box{
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-right: 0;  
+  height: 85vh;
+  width: 60%;
+  padding: 20px;
+  border-radius: 58% 27% 0% 75% / 42% 17% 10% 38% ;
+  transition: border-radius 0.5s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Darker shadow color */
+  text-align: center;
+  overflow: scroll;
+}
+.right-box:hover{
+  border-radius: 32% 43% 23% 45% / 42% 20% 49% 32%;
+}
+
+.left-box-content {
+  background-color: rgb(236, 236, 236);
+  height: 300px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  border-radius: 60% 40% 55% 45% / 36% 78% 22% 64%;
+  box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: border-radius 0.5s ease-in-out;
+}
+.third-bubble,
+.second-bubble{
+  background-color: rgb(236, 236, 236);
+  height: 200px;
+  width: 200px;
+  border-radius: 60% 40% 55% 45% / 36% 78% 22% 64%;
+  box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.1);
+  margin-left: 50%;
+  transition: border-radius 0.5s ease-in-out;
+  display: flex;
+}
+
+.third-bubble{
+  height: 150px;
+  width: 150px; 
+  margin-left: 20%;
+
+}
+.third-bubble:hover,
+.second-bubble:hover,
+.left-box-content:hover{
+  border-radius: 32% 43% 23% 45% / 42% 20% 49% 32%;
+}
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .ride-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .toggle-button{
+    background-color: transparent;
+    border: none;
+    padding:10px;
+    border-radius: 60% 40% 55% 45%/36% 78% 22% 64%;
+    transition: background-color 0.5s ease-in-out;
+  }
+  .toggle-button:hover{
+    background-color: #a6a59b;
+    border-radius: 60% 40% 55% 45%/36% 78% 22% 64%;
+  }
+  .logout-btn{
+    background-color: transparent;
+    border: none;
+    padding:10px;
+    border-radius: 60% 40% 55% 45%/36% 78% 22% 64%;
+    transition: color 0.3s ease-in-out;
+  }
+  .logout-btn:hover{
+    color: red;
+  }
+  .welcome-title{
+    font-size: 2.5rem;
+    color: #888783;
+  }
+  p{
+    color: #888783;
+    font-size: 1rem;
+  }

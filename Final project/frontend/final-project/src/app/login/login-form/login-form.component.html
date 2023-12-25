@@ -1,0 +1,30 @@
+<body class="wrapper">
+  <form class="form-signin" [formGroup]="form" (ngSubmit)="submit()">
+    <span class="red-note" *ngIf="!form.controls['email'].valid && form.controls['email']?.touched">*</span>
+    <label for="inputEmail" class="">Email address</label>
+    <input
+      formControlName="email"
+      id="inputEmail"
+      type="email"
+      class=""
+      placeholder="Email address"
+      required
+    />
+
+    <span class="red-note" *ngIf="!form.controls['password'].valid && form.controls['password']?.touched">*</span>
+    <label for="inputPassword" class="">Password</label>
+    <input
+      formControlName="password"
+      id="inputPassword"
+      type="password"
+      class=""
+      placeholder="Password"
+      required
+    />
+    <p *ngIf="incorrectPassword">Incorrect password</p>
+
+
+    <button class="passenger-reg-btn" type="submit" [disabled]="form.invalid">Log in</button>
+    <p *ngIf="userNotExist">It seems like you don't have an account</p>
+  </form>
+</body>
