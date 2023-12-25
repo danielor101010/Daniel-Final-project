@@ -1,13 +1,15 @@
 <div class="header">
   <div></div>
   <div class="logo">
-    <h1>Logo</h1>
+    <div class="logo">
+      <img class="logo-img" src="../../assets/logo.png" alt=""> 
+      </div>
   </div>
   <div class="header-btns">
     <button class="toggle-button" (click)="toggleMyRides()">
       {{ showMyRides ? ' All Rides' : ' MyRides' }}
     </button>
-    <button class="toggle-button logout-btn" (click)="logOut()"><i class="fas fa-sign-out-alt"></i></button>
+    <button class="logout-btn" (click)="logOut()"><i class="fas fa-sign-out-alt"></i></button>
   </div>
 </div>
 
@@ -15,8 +17,8 @@
   <div class="first-section-items">
     <div class="left-box">
         <div class="left-box-content">
-          <h2 *ngFor="let field of userDetails">Welcome {{ field.first_name }}</h2>
-        <h2>So, Where are we going today</h2>
+          <h2 class="welcome-title" *ngFor="let field of userDetails">Welcome {{ field.first_name }}!</h2>
+          <p>So, Where are we going today?</p>
       </div>
     </div>
   </div>

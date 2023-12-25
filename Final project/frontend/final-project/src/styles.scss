@@ -2,11 +2,12 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&display=swap');
 
 body {
     font-family: math;
-    overflow: overlay !important;
-    background-color: rgba(244, 245, 245, 0.863);
+    font-family: 'Electrolize', sans-serif;
+        background-color: rgba(244, 245, 245, 0.863);
 }
 
 ::-webkit-scrollbar {

@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center; 
+  margin-left: 30px;
 }
-
 
 .ride-box {
   width: 300px;
@@ -67,4 +67,8 @@ p {
 
 .passenger-list p {
   margin: 5px;
+}
+.no-rides{
+  margin-top: 40%;
+  font-size: 1.5rem;
 }

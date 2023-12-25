@@ -1,7 +1,13 @@
 <div class="wrapper">
   <div class="ride-container">
     <div class="right-box">
-      <h2 class="available-title">Available Rides</h2>
+      <h2 class="available-title">{{ myRides.length > 0 ? 'Available Rides' : 'My Rides' }}</h2>
+
+      <div *ngIf="myRides.length === 0">
+        <p class="no-rides">You haven't joined any rides yet.</p>
+        <hr>
+      </div>
+
       <div *ngFor="let ride of myRides" class="ride-box" (click)="toggleDetails(ride)">
         <div class="ride-details">
           <h3> Departure: <em>{{ ride.departure }}</em> </h3>
@@ -12,11 +18,10 @@
             <h4>Contact: <em><a href="tel:{{ride.driver.phone}}">{{ride.driver.phone}}</a></em></h4>
             <h4>Car type: <em>{{ride.driver.carType}}</em></h4>
             <hr>
-            <button  class="leave-btn" (click)="leaveRide(ride.id)">Leave Ride</button>
+            <button class="leave-btn" (click)="leaveRide(ride.id)">Leave Ride</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
