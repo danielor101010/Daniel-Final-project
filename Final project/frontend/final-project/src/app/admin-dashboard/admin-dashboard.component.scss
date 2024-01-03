@@ -1,0 +1,202 @@
+.header {
+    display: flex;
+    height: 60px;
+    color: black;
+    background-color: rgb(224, 224, 224);
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 20px; 
+    margin-bottom: 10px;
+    box-shadow:  2px -5px 20px rgba(0, 0, 0, 0.2);
+  }
+  .wrapper {
+    display: flex;
+  }
+  .first-section-items {
+    display: flex;
+    width: 100%;
+    justify-content: center;   
+    background-color: rgba(216, 216, 216, 0.86);
+}
+  .right-box{
+    background-color: rgb(234, 234, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-right: 0;  
+    height: 85vh;
+    width: 60%;
+    padding: 20px;
+    border-radius: 58% 27% 0% 75% / 42% 17% 10% 38% ;
+    transition: border-radius 0.5s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    overflow: scroll;
+  }
+  .right-box:hover{
+    border-radius: 32% 43% 23% 45% / 42% 20% 49% 32%;
+  }
+  .cycling-divs {
+    display: flex;
+    justify-content: row;
+    margin-top: 20px; 
+    width: 800;
+  }
+  
+  .cycling-div {
+    width: 220px;
+    height: 200px;
+    margin: 0 20px;
+    background-color: rgba(216, 216, 216, 0.86);
+    border-radius: 32% 43% 23% 45% / 42% 20% 49% 32%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .left-box{
+    padding-left: 10px;
+  }
+  
+  .left-box-content {
+    background-color: rgb(234, 234, 234);
+    height: 300px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    border-radius: 60% 40% 55% 45% / 36% 78% 22% 64%;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: border-radius 0.5s ease-in-out;
+  }
+ 
+  .third-bubble,
+  .second-bubble{
+    background-color: rgb(234, 234, 234);
+    height: 200px;
+    width: 200px;
+    border-radius: 60% 40% 55% 45% / 36% 78% 22% 64%;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.3);
+    margin-left: 50%;
+    transition: border-radius 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .third-bubble{
+    height: 150px;
+    width: 150px; 
+    margin-left: 20%;
+  
+  }
+  
+  .third-bubble:hover,
+  .second-bubble:hover,
+  .left-box-content:hover{
+    border-radius: 32% 43% 23% 45% / 42% 20% 49% 32%;
+  }
+  
+  .welcome-title{
+    font-size: 2.5rem;
+    color: #888783;
+  }
+  p{
+    color: #888783;
+    font-size: 1rem;
+  }
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .ride-section {
+      display: flex;
+      flex-direction: column;
+    }
+    .toggle-button{
+      background-color:transparent ;
+      border: none;
+      padding:10px;
+      border-radius: 60% 40% 55% 45%/36% 78% 22% 64%;
+      transition: background-color 0.5s ease-in-out;
+    }
+    // .toggle-button:hover{
+    //   color: white;
+    //   background-color: #a6a59b;
+    //   border-radius: 60% 40% 55% 45%/36% 78% 22% 64%;
+    // }
+    .logout-btn{
+      background-color: transparent;
+      border: none;
+      padding:10px;
+      border-radius: 60% 40% 55% 45%/36% 78% 22% 64%;
+      transition: color 0.3s ease-in-out;
+    }
+    .logout-btn:hover{
+      color: red;
+    }
+
+.bubbles{
+    flex-direction: row;
+}
+    // ------------------rides----------------
+        .title{
+            margin-top: 30%;
+            margin-left: 30%;
+        }
+        hr{
+            margin-left: 30%;
+        }
+      .ride-box {
+        width: 300px;
+        display: flex;
+        text-align: left;
+        justify-content: space-between; 
+        background-color: rgba(244, 251, 255, 0.596);
+        border-radius: 8px;
+        margin-bottom: 15px;
+        margin-left: 20%;
+        overflow: hidden;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s;
+        padding: 10px 5;
+        max-width: 400px;
+      }
+      
+      .ride-box:hover {
+        box-shadow:-20px 18px 20px rgba(0, 0, 0, 0.1)
+      }
+      
+      .ride-details {
+        padding: 10px;
+      }
+    
+      h1, h2 {
+        color: #555;
+      }
+      
+      h3, h4 {
+        margin: 0;
+        color: #555;
+        font-size: 20px;
+        font-family: serif;
+      }
+      
+      p {
+        color: #777;
+      }
+      .toggle-button {
+        border:none;
+      }
+      
+      .toggle-button.active {
+        border-bottom: 1px solid gray;
+      }
+
+      .cycle-title{
+        margin-bottom: 30px;
+      }

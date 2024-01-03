@@ -49,7 +49,6 @@ export class UserDashboardComponent implements OnInit {
     sessionStorage.clear()
     this.router.navigate(['home']);    
   }
-  
   toggleMyRides() {
     this.showMyRides = !this.showMyRides;
   }

@@ -2,7 +2,7 @@
   display: flex;
   height: 60px;
   color: black;
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(224, 224, 224);
   justify-content: space-between;
   align-items: center; 
   padding: 0 20px; 
@@ -11,15 +11,16 @@
 }
 .wrapper {
   display: flex;
+  
 }
 .first-section-items {
   display: flex;
   width: 100%;
   justify-content: center;   
-  background-color: rgba(244, 245, 245, 0.863); 
+  background-color: rgba(216, 216, 216, 0.86);
 }
 .right-box{
-  background-color: rgb(236, 236, 236);
+  background-color: rgba(234, 234, 237, 0.833);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,9 +38,12 @@
 .right-box:hover{
   border-radius: 32% 43% 23% 45% / 42% 20% 49% 32%;
 }
+.left-box{
+  padding-left: 10px;
+}
 
 .left-box-content {
-  background-color: rgb(236, 236, 236);
+  background-color: rgba(234, 234, 237, 0.833);
   height: 300px;
   width: 450px;
   display: flex;
@@ -53,7 +57,7 @@
 }
 .third-bubble,
 .second-bubble{
-  background-color: rgb(236, 236, 236);
+  background-color: rgba(234, 234, 237, 0.833);
   height: 200px;
   width: 200px;
   border-radius: 60% 40% 55% 45% / 36% 78% 22% 64%;

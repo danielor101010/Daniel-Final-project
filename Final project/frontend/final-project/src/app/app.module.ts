@@ -17,11 +17,6 @@ import { MyridesComponent } from './user-dashboard/myrides/myrides.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-
-
-
-
 @NgModule({
     declarations: [
         AppComponent,

@@ -1,0 +1,104 @@
+
+<div class="header">
+    <div>
+        
+    </div>
+    <div class="logo">
+        <!-- <h1>Logo</h1> -->
+    </div>
+    <div class="header-btns">
+        <button [class.active]="selectedCategory === 'drivers'" class="toggle-button" (click)="showAllDrivers()">All Drivers</button>
+        <button [class.active]="selectedCategory === 'passengers'" class="toggle-button" (click)="showAllPassengers()">All Passengers</button>
+        <button [class.active]="selectedCategory === 'rides'" class="toggle-button" (click)="showAllRides()">All Rides</button>
+        <button class="logout-btn" (click)="logOut()"><span class="material-icons"><i class="fas fa-sign-out-alt"></i></span></button>
+      </div>
+      
+  </div>
+  
+  <div class="wrapper">
+    <div class="first-section-items">
+      <div class="left-box">
+        <div class="left-box-content">
+            <h1><em>Hello Admin</em></h1>
+          <p>How you doing today?</p>
+        </div>
+        <div class="second-bubble">            
+        </div>
+        <div class="third-bubble">        
+        </div>
+      </div>
+      
+  
+      <div class="right-box">
+        <div class="ride-section">
+            <h1>Overview</h1>
+            <div *ngIf="showCyclingDivs" class="cycling-divs">
+                <div class="cycling-div">
+                    <h3 class="cycle-title">Rides:</h3>
+                    <h1>{{rides.length}}</h1>
+
+                </div>
+                <div class="cycling-div">
+                    <h3 class="cycle-title">Drivers:</h3>
+                    <h1>{{drivers.length}}</h1>
+                </div>
+                <div class="cycling-div">
+                    <h3 class="cycle-title">Passengers:</h3>
+                    <h1>{{passengers.length}}</h1>
+                </div>
+              </div>
+
+          <div *ngIf="selectedCategory === 'drivers'">  
+            <h1 class="title"><em>Drivers</em></h1>
+            <hr>
+            <div *ngFor="let driver of drivers" class="ride-box" (click)="toggleDriverDetails(driver)">
+                <div class="ride-details">
+            <h3><em>Name:</em> {{ driver.first_name }} {{ driver.last_name }}</h3>    
+            <div *ngIf="driver.showDetails" class="ride-details">
+                <h4><em>Email:</em> {{ driver.email }}</h4>
+                <h4><em>Username:</em> {{ driver.username }}</h4>
+                <h4><em>Phone:</em> {{ driver.phone }}</h4>
+                <h4>Car Type: {{ driver.carType }}</h4>
+                <h4>Seats: {{ driver.seats }}</h4>
+            </div>
+            </div>
+        </div>
+  
+          </div>
+          <div *ngIf="selectedCategory === 'passengers'">
+            <h1 class="title">Passengers</h1>
+            <hr>
+            <div *ngFor="let passenger of passengers" class="ride-box" (click)="togglePassengerDetails(passenger)">
+              <div class="ride-details">
+                <h3><em>Name:</em> {{ passenger.first_name }} {{ passenger.last_name }}</h3>
+                <div *ngIf="passenger.showDetails" class="ride-details">
+                  <h4><em>Email:</em> {{ passenger.email }}</h4>
+                  <h4><em>Username:</em> {{ passenger.username }}</h4>
+                  <h4><em>Phone:</em> {{ passenger.phone }}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="selectedCategory === 'rides'">
+                <h1 class="title">Rides</h1>
+                <hr>
+                <div *ngFor="let ride of rides" class="ride-box">
+                    <div class="ride-details">
+                      <h3><em> Departure:</em> {{ ride.departure }}</h3>
+                      <h4><em>Destination: </em>{{ ride.destination }}</h4>
+                      <p *ngIf="ride.showDetails" class="ride-details"><em>On: {{ ride.time }}</em></p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+  
+  
+         

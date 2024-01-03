@@ -8,20 +8,29 @@ import { ApiService } from '../driver-dashboard.component';
   styleUrls: ['./driver-ride.component.scss']
 })
 export class DriverRideComponent implements OnInit {
-
-  driverRides: any[] = []; // Use an array to store multiple rides
-  baseUrl = 'http://127.0.0.1:8000/api';
+  driverRides: any[] = []; 
   passengers: any[] = []; 
-
+  driverId: string | null | undefined;
+  
   constructor(private http: HttpClient, private apiService: ApiService) {}
 
   ngOnInit(): void {
-    const driverId = sessionStorage.getItem('id');
-    this.fetchDriverRides(driverId);
+    this.driverId = sessionStorage.getItem('id');
+
+    this.apiService.fetchDriverRides(this.driverId).subscribe({
+      next: (response:any) => {
+        console.log('Fetched driver rides:', response);
+        this.driverRides = response;
+        this.driverRides.forEach(ride => this.getPassengersForRide(ride.id));
+      },
+      error:(error:any) => {
+        console.error('Error fetching driver rides:', error);
+      }
+    })
   }
 
   fetchDriverRides(driverId: any): void {
-    const apiUrl = `${this.baseUrl}/driverRides/${driverId}`;
+    const apiUrl = `${this.apiService.baseUrl}/driverRides/${driverId}`;
     this.http.get(apiUrl).subscribe(
       (response: any) => {
         console.log('Fetched driver rides:', response);
@@ -50,7 +59,7 @@ export class DriverRideComponent implements OnInit {
   }
 
   deleteRide(rideId: number): void {
-    const apiUrl = `${this.baseUrl}/deleteRide/${rideId}`;
+    const apiUrl = `${this.apiService.baseUrl}/deleteRide/${rideId}`;
     this.http.delete(apiUrl).subscribe(
       (response: any) => {
         console.log('Ride deleted successfully:', response);
@@ -65,3 +74,4 @@ export class DriverRideComponent implements OnInit {
     ride.showDetails = !ride.showDetails;
   }
 }
+  

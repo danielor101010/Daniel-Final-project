@@ -45,8 +45,10 @@ export class LoginFormComponent {
 
           if (role === 'passenger') {
             this.router.navigate(['userDashboard']);
-          } else {
+          } else if(role === 'driver'){
             this.router.navigate(['driverDashboard']);
+          } else {
+            this.router.navigate(['adminDashboard'])
           }
         },
         (error) => {

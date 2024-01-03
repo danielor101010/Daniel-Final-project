@@ -13,12 +13,11 @@ export class MyridesComponent implements OnInit {
   rideDriver: any[] = [];
 
   constructor(private http: HttpClient, private apiService: ApiService) {}
-
+  
   ngOnInit(): void {
     const passengerId = sessionStorage.getItem('id');
     this.fetchUserRides(passengerId);
   }
-
   fetchUserRides(passengerId: any): void {
     const apiUrl = `${this.baseUrl}/userRides/${passengerId}`;
     this.http.get(apiUrl).subscribe(
@@ -32,7 +31,6 @@ export class MyridesComponent implements OnInit {
       }
     );
   }
-
   getDriverForRide(rideId: number): void {
     const apiUrl = `${this.apiService.baseUrl}/rides/${rideId}/driver`;
     this.http.get(apiUrl).subscribe(
@@ -47,7 +45,6 @@ export class MyridesComponent implements OnInit {
       }
     );
   }
-
   leaveRide(rideId: number): void {
     const passengerId = sessionStorage.getItem('id');
     const apiUrl = `${this.baseUrl}/leaveRide/${rideId}`;

@@ -24,7 +24,6 @@ export class AllridesComponent implements OnInit {
       (response: any) => {
         this.rides = response;
         this.filteredRides = this.rides
-        // this.rides.forEach(ride => {});
       },
       (error) => {
         console.error('Error fetching rides:', error);
@@ -42,8 +41,7 @@ export class AllridesComponent implements OnInit {
       (error) => {
         if (error && error.error && error.error.error === 'Ride is full') {
           console.log('Ride is full. Cannot join.');
-          // alert("Sorry the ride is full")
-          this.rideIsFull = true;
+          alert('This ride is full.')
         } else {
           console.error('Unexpected error:', error);
           this.rideIsFull = false;

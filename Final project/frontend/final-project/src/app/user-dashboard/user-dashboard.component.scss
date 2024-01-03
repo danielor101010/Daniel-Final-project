@@ -1,8 +1,7 @@
-
 .header {
   display: flex;
   height: 60px;
-  background-color: rgb(236, 236, 236);
+  background-color: rgb(224, 224, 224); 
   margin-bottom: 7px;
   justify-content: space-between;
   align-items: center; 
@@ -13,19 +12,18 @@
   width: 200px;
   height: 50px;
   mix-blend-mode: color-burn;
-  
 }
 
 .wrapper {
   display: flex;
-  background-color: rgba(244, 245, 245, 0.863); 
+  background-color: rgba(216, 216, 216, 0.86); 
 }
 .first-section-items {
   display: flex;
   width: 100%;
   justify-content: center; 
-
 }
+
 .right-box {
   background-color: rgb(236, 236, 236);
   margin: auto;

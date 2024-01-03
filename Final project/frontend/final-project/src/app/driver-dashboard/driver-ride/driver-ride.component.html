@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="ride-container">
-    <h2>Your Rides as a Driver</h2>
+    <h2>Your Rides</h2>
     <div *ngIf="driverRides.length > 0">
       <div *ngFor="let ride of driverRides" class="ride-box" (click)="toggleDetails(ride)">
         <div class="ride-details">
@@ -25,7 +25,7 @@
       </div>
     </div>
     <div *ngIf="driverRides.length === 0" class="no-rides">
-      <p>No rides found for this driver.</p>
+      <p>You don't have any rides yet.</p>
     </div>
   </div>
 </div>
